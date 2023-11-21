@@ -8,6 +8,9 @@ import java.awt.Shape;
 import java.awt.geom.GeneralPath;
 import java.awt.geom.Rectangle2D.Double;
 
+/**
+ * Клас ShapeFactory створює різні геометричні фігури.
+ */
 public class ShapeFactory {
    public Shape shape;
    public BasicStroke stroke = new BasicStroke(3.0F);   //Межа фігури в 3 пікселі встановлена за замовчуванням(згідно варіанту 1)
@@ -72,6 +75,15 @@ public class ShapeFactory {
 
    }
 
+	/**
+     * Метод, який створює зірку за допомогою заданої кількості arms.
+     *
+     * @param arms    кількість arms у зірки
+     * @param center  центр зірки
+     * @param rOuter  радіус зовнішнього кола зірки
+     * @param rInner  радіус внутрішнього кола зірки
+     * @return форма зірки
+     */
    private static Shape createStar(int arms, Point center, double rOuter, double rInner) {
       double angle = 3.141592653589793D / (double)arms;
       GeneralPath path = new GeneralPath();
