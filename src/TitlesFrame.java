@@ -3,11 +3,16 @@ import java.awt.Component;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
+/**
+ * Клас TitlesFrame є підкласом JFrame і представляє вікно програми з кривими фігурами.
+ */
 public class TitlesFrame extends JFrame {
    public TitlesFrame() {
       this.initUI();
    }
-
+/**
+* Метод, який ініціалізує графічний інтерфейс вікна.
+*/
    private void initUI() {
       this.setTitle("Криві фігури");
       this.setDefaultCloseOperation(3);
