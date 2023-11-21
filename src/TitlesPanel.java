@@ -10,6 +10,9 @@ import java.awt.geom.AffineTransform;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
+/**
+ * Клас TitlesPanel є панеллю для відображення анімованих фігур.
+ */
 public class TitlesPanel extends JPanel implements ActionListener {
    private Graphics2D g2d;
    private Timer animation;
@@ -24,6 +27,11 @@ public class TitlesPanel extends JPanel implements ActionListener {
       this.animation.start();
    }
 
+   	/**
+     * Метод, що викликається при події таймера. Викликає перефарбовування панелі.
+     *
+     * @param arg0 подія ActionEvent
+     */
    public void actionPerformed(ActionEvent arg0) {
       if (this.is_done) {
          this.repaint();
@@ -31,6 +39,11 @@ public class TitlesPanel extends JPanel implements ActionListener {
 
    }
 
+   	/**
+     * Метод, який виконує малювання фігур на панелі.
+     *
+     * @param g графічний контекст для малювання
+     */
    private void doDrawing(Graphics g) {
       this.is_done = false;
       this.g2d = (Graphics2D)g;
@@ -62,6 +75,11 @@ public class TitlesPanel extends JPanel implements ActionListener {
       this.is_done = true;
    }
 
+   	/**
+     * Перевизначений метод для малювання компоненту.
+     *
+     * @param g графічний контекст для малювання
+     */
    public void paintComponent(Graphics g) {
       super.paintComponent(g);
       this.doDrawing(g);
