@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.Timer;
 
 /**
- * Клас TitlesPanel є панеллю для відображення анімованих фігур.
+ * The class TitlesPanel is a panel for displaying animated shapes.
  */
 public class TitlesPanel extends JPanel implements ActionListener {
    private Graphics2D g2d;
@@ -28,9 +28,9 @@ public class TitlesPanel extends JPanel implements ActionListener {
    }
 
    	/**
-     * Метод, що викликається при події таймера. Викликає перефарбовування панелі.
+     * The method called upon a timer event. It triggers the repainting of the panel.
      *
-     * @param arg0 подія ActionEvent
+     * @param arg0 event ActionEvent
      */
    public void actionPerformed(ActionEvent arg0) {
       if (this.is_done) {
@@ -40,9 +40,9 @@ public class TitlesPanel extends JPanel implements ActionListener {
    }
 
    	/**
-     * Метод, який виконує малювання фігур на панелі.
+     * The method that performs drawing of shapes on the panel.
      *
-     * @param g графічний контекст для малювання
+     * @param g Graphics context for drawing
      */
    private void doDrawing(Graphics g) {
       this.is_done = false;
@@ -76,9 +76,9 @@ public class TitlesPanel extends JPanel implements ActionListener {
    }
 
    	/**
-     * Перевизначений метод для малювання компоненту.
+     * Overridden method for component painting.
      *
-     * @param g графічний контекст для малювання
+     * @param g Graphics context for drawing
      */
    public void paintComponent(Graphics g) {
       super.paintComponent(g);
