@@ -9,11 +9,11 @@ import java.awt.geom.GeneralPath;
 import java.awt.geom.Rectangle2D.Double;
 
 /**
- * Клас ShapeFactory створює різні геометричні фігури.
+ * The ShapeFactory class creates various geometric shapes.
  */
 public class ShapeFactory {
    public Shape shape;
-   public BasicStroke stroke = new BasicStroke(3.0F);   //Межа фігури в 3 пікселі встановлена за замовчуванням(згідно варіанту 1)
+   public BasicStroke stroke = new BasicStroke(3.0F);   //The boundary of the figure is set to 3 pixels by default (according to option 1).
    public Paint paint;
    public int width = 25;
    public int height = 25;
@@ -35,11 +35,11 @@ public class ShapeFactory {
       case 5:
          this.shape = new Double((double)(-this.width) / 2.0D, (double)(-this.height) / 2.0D, (double)this.width, (double)this.height);
          break;
-      case 7:                                         //Згідно з варіантом має бути побудований шестикутник(варіант 1)
+      case 7:                                         //According to the option, a hexagon should be constructed (option 1).
          GeneralPath path = new GeneralPath();
 		   double side = (double) this.width/2.0;
-		   double tmp_height = side * Math.sqrt(3); 	   // Визначення висоти шестикутника
-		   path.moveTo(-side, 0);                       // Встановлення першої вершини шестикутника
+		   double tmp_height = side * Math.sqrt(3); 	   // The definition of the height of a hexagon
+		   path.moveTo(-side, 0);                       // Setting the first vertex of the hexagon
 		   path.lineTo(-side / 2, -tmp_height / 2);
 		   path.lineTo(side / 2, -tmp_height / 2);
 		   path.lineTo(side, 0);
